@@ -1,0 +1,18 @@
+version: '3'
+services:
+  sonarr:
+    container_name: sonarr
+    image: hotio/sonarr
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - PUID=1000 # default user id, defined in .env
+      - PGID=1000 # default group id, defined in .env
+      - TZ=Europe/London # timezone, defined in .env
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - sonarr-config:/config # config files
+      - media-tv:/tv # tv shows folder
+      - Downloads:/downloads # download folder
+    # networks:
+    #   - media-organisation-network

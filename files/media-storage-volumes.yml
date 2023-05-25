@@ -1,0 +1,39 @@
+version: "3.8"
+
+volumes:
+
+
+  media-movies:
+      driver: local
+      driver_opts:
+        type: "nfs"
+        o: "nfsvers=4,addr=192.168.1.26,nolock,soft,rw"
+        device: ":/mnt/md0/Agar-Network/Media/NEW-MOVIES"
+  media-tv:
+      driver: local
+      driver_opts:
+        type: "nfs"
+        o: "nfsvers=4,addr=192.168.1.26,nolock,soft,rw"
+        device: ":/mnt/md0/Agar-Network/Media/NEW-TV"
+
+  media-music:
+      driver: local
+      driver_opts:
+        type: "nfs"
+        o: "nfsvers=4,addr=192.168.1.26,nolock,soft,rw"
+        device: ":/mnt/md0/Agar-Network/Media/Music"
+
+        
+  AgarTV-media-OLD:
+      driver: local
+      driver_opts:
+        type: "nfs"
+        o: "nfsvers=4,addr=192.168.1.26,nolock,soft,rw"
+        device: ":/mnt/md0/Agar-Network/container-files/agarTV-media"
+
+  AgarTV-media:
+      driver: local
+      driver_opts:
+        type: "nfs"
+        o: "nfsvers=4,addr=192.168.1.26,nolock,soft,rw"
+        device: ":/mnt/md0/Agar-Network/Media/agarTV-media"
