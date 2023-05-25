@@ -14,5 +14,11 @@ services:
       - sonarr-config:/config # config files
       - media-tv:/tv # tv shows folder
       - Downloads:/downloads # download folder
-    # networks:
-    #   - media-organisation-network
+    networks:
+      - media_network
+networks:
+  media_network:
+    name: media_network
+    external: true
+
+
