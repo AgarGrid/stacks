@@ -3,8 +3,7 @@ services:
 ## this is a dummy service just so we can create netowrks here.. 
   habited_dummy_service:
     image: hello-world:latest    
-    networks:
-      - media_network
+
 
 
 networks:

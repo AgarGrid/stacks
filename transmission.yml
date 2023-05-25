@@ -16,9 +16,3 @@ services:
       - 51413:51413
       - 51413:51413/udp
     restart: unless-stopped
-    networks:
-      - media_network
-networks:
-  media_network:
-    name: media_network
-    external: true

@@ -14,9 +14,3 @@ services:
       - radarr-config:/config # config files
       - media-movies:/movies # movies folder
       - Downloads:/downloads # download folder
-    networks:
-      - media_network
-networks:
-  media_network:
-    name: media_network
-    external: true
