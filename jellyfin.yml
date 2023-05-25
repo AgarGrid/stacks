@@ -1,0 +1,18 @@
+version: '3.8'
+name: media-stack
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - jellyfin-config:/config
+      - media-movies:/data/movies
+      - media-tv:/data/tv
+      - media-music:/data/music
+    ports:
+      - 8096:8096
+    restart: unless-stopped

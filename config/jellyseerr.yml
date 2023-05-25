@@ -1,0 +1,12 @@
+version: "3.8"
+
+volumes:
+
+ ## All containers 
+
+  jellyseerr-config:
+      driver: local
+      driver_opts:
+        type: "nfs"
+        o: "nfsvers=4,addr=192.168.1.26,nolock,soft,rw"
+        device: ":/mnt/md0/Agar-Network/config/jellyseerr"
