@@ -12,3 +12,5 @@ services:
     ports:
       - 9696:9696
     restart: unless-stopped
+    networks:
+      - media_network  

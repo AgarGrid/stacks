@@ -4,7 +4,7 @@ services:
     container_name: radarr
     image: hotio/radarr
     restart: unless-stopped
-    network_mode: host
+    ##network_mode: host
     environment:
       - PUID=1000 # default user id, defined in .env
       - PGID=1000 # default group id, defined in .env
@@ -14,3 +14,5 @@ services:
       - radarr-config:/config # config files
       - media-movies:/movies # movies folder
       - Downloads:/downloads # download folder
+    networks:
+      - media_network  

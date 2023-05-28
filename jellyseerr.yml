@@ -1,6 +1,6 @@
 version: '3'
 services:
-    jellyseerr:
+   jellyseerr:
       image: fallenbagel/jellyseerr:latest
       container_name: jellyseerr
       environment:
@@ -13,3 +13,5 @@ services:
       volumes:
          - jellyseerr-config:/app/config
       restart: unless-stopped
+      networks:
+         - media_network  
